@@ -1,7 +1,7 @@
 .boxH {
     background-color:  var(--color-cinzaMetal-1);
     width: 100%;
-    height: 720px;
+    height: 900px;
     padding-top: 92px;
     padding-bottom: 92px;
     display: flex;
@@ -14,7 +14,6 @@
     margin: auto;
     display: flex;
     border-radius: 6px;
-
 }
 
 .boxH .container.nomeRockMode {
@@ -27,6 +26,8 @@
     width: 584px;
     height: 50px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -41,13 +42,28 @@
 
 .boxH .container .nomeRockMode .imagem {
  
-    height: 536px;
-    width: 584px;
-    display: flex;
+    
 }
 
 .boxH .container .nomeRockMode .imagem img {
     border-radius: 6px;
+}
+
+.boxH .container .nomeRockMode .meio {
+    font-size: 19px;
+    font-family: inherit auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxH .container .nomeRockMode .meio a {
+    text-decoration: none;
+    color: #42b72a;
+}
+
+.boxH .container .nomeRockMode .meio a:hover {
+    text-decoration: underline;
 }
 
 
@@ -94,26 +110,29 @@
     
 }
 
-.boxH .container .containerBox .boxLogin .containerL a  {
-    
+.boxH .container .containerBox .boxLogin .containerL a  {    
     width: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
     text-decoration: none;   
-    font-size: 16px;
-    
-    
+    font-size: 16px;   
+}
+
+.boxH .container .containerBox .boxLogin .containerL a button:hover {
+    background-color: #095ceb;
 }
 
 .boxH .container .containerBox .boxLogin  .containerLa {
     margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .boxH .container .containerBox .boxLogin .containerLa a {
-
     height: 50px;
-    width: 100%;
+    width: 200px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -121,23 +140,26 @@
     font-size: 16px;
     border-bottom: var(--color-cinzaMetal-1) 1px solid;
     margin-top: 10px;
+    border-radius: 6px;
+}
 
+.boxH .container .containerBox .boxLogin .containerLa a:hover {
+    background-color: #fafafa;
+    text-decoration: underline;
 }
 
 .boxH .container .containerBox .boxLogin .containerLb {
     margin: 50px 10px 0 10px;
 }
 
-.boxH .container .containerBox .boxLogin .containerLb a  {
-    
+.boxH .container .containerBox .boxLogin .containerLb a  {   
     width: 200px;
     align-items: center;
     display: flex;
     justify-content: center;
     text-decoration: none;   
     font-size: 16px;
-    margin: 0 auto 0 auto;
-    
+    margin: 0 auto 0 auto;   
 }
 
 .boxH .container .containerBox .boxLogin .containerL  a button{
@@ -155,7 +177,6 @@
 }
 
 .boxH .container .containerBox .boxLogin .containerLb a button {
-
     display: flex;
     justify-content: center;
     font-size: 20px;    
@@ -166,7 +187,56 @@
     align-items: center;
     border-radius: 6px ;
     text-decoration: none;
-    cursor: pointer;
-      
+    cursor: pointer;      
+}
+
+.boxH .container .containerBox .boxLogin .containerLb a button:hover {
+    background-color: #1ca002;
+}
+
+/* rodapé */
+
+.rodape {
+    width: 100%;
+    height: 53px;
+    background-color: rgb(243, 235, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+
+    .boxH .container {
+        background-color: var(--color-cinzaMetal-1);
+        width: 980px;
+        height: 536px;
+        margin: auto;
+        display: flex;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .boxH .container .nomeRockMode .imagem {
+ 
+        height: 488px;
+        width: 584px;
+        display: none;
+        
+    }
+
+    .boxH .container .nomeRockMode .header {
+        background-color: var(--color-cinzaMetal-1);
+        width: 584px;
+        height: 50px;
+        display: flex;
+    
+    }
+    
+    
 }
 

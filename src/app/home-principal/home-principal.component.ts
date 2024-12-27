@@ -10,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class HomePrincipalComponent {
 
+  date: Date = new Date();
+  
+
 }

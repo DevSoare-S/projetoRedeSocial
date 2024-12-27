@@ -194,18 +194,6 @@
     background-color: #1ca002;
 }
 
-/* rodapé */
-
-.rodape {
-    width: 100%;
-    height: 53px;
-    background-color: rgb(243, 235, 225);
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: center;
-}
-
 @media (max-width: 768px) {
 
 

@@ -9,5 +9,6 @@
 :root {
     --color-preto-1: #000000;
     --color-vermelhoEscuro-1: #8B0000;
-    --color-cinzaMetal-1: aliceblue;
+    --color-aliceblue-1: aliceblue;
+    --color-aliceblue-2: rgb(219, 224, 228);
 }

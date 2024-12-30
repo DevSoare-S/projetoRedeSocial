@@ -1,5 +1,5 @@
 .boxH {
-    background-color:  var(--color-cinzaMetal-1);
+    background: linear-gradient(180deg, var(--color-aliceblue-1)15% , var(--color-aliceblue-2)100%);
     width: 100%;
     height: 900px;
     padding-top: 92px;
@@ -18,7 +18,6 @@
 
 .boxH .container.nomeRockMode {
     width: 536px;
-    
 }
 
 .boxH .container .nomeRockMode .header {
@@ -39,11 +38,6 @@
     display: flex;
     color: #0866ff;
 } 
-
-.boxH .container .nomeRockMode .imagem {
- 
-    
-}
 
 .boxH .container .nomeRockMode .imagem img {
     border-radius: 6px;

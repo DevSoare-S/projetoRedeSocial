@@ -12,23 +12,32 @@
 
                 <div class="meio">
                     <p>Uma rede social feita para estudantes.</p>
-                    <p> <a class="cadastro" routerLink="cadastro" >Cadastre-se</a> e venha compartilhar seus conhecimentos.</p>
+                    <p> <a class="cadastro" routerLink="cadastro">Cadastre-se</a> e venha compartilhar seus
+                        conhecimentos.</p>
                 </div>
             </div>
 
             <div class="containerBox">
                 <div class="boxLogin">
-                    <div class="containerL ">
-                        <input type="email or number " placeholder="Email ou Telefone">
-                    </div>
 
-                    <div class="containerL">
-                        <input type="password" placeholder="Senha">
-                    </div>
+                    <form #customerForm="ngForm" (ngSubmit)="onSubmit()">
+                        <div class="containerL ">
+                            <input type="text" placeholder="Email ou Telefone" id="email" required
+                                [(ngModel)]="model.email" name="email" #email="ngModel">
+                        </div>
+                        <div class="error" [hidden]="email.valid || email.pristine">Email obrigatório</div>
 
-                    <div class="containerL">
-                        <a class="b" ><button type="submit">Entrar</button></a>
-                    </div>
+                        <div class="containerL">
+                            <input type="password" placeholder="Senha" id="password" required
+                                [(ngModel)]="model.password" name="password" #password="ngModel">
+                        </div>
+                        <div class="error" [hidden]="password.valid || password.pristine">Senha obrigatório</div>
+
+                        <div class="containerL">
+                            <a class="b"><button type="submit" [disabled]="!customerForm.form.valid">Entrar</button></a>
+                        </div>
+
+                    </form>
 
                     <div class="containerLa">
                         <a routerLink="recuperarSenha">Esqueceu a senha?</a>

@@ -13,3 +13,10 @@
     --color-aliceblue-2: rgb(219, 224, 228);
     --color-azultitulo-1: #0866ff;
 }
+
+.error {
+    margin: 10px 0 0 10px;
+    color: red;
+    padding: 0 0 0 6px;
+    border-left: 6px solid red;
+}

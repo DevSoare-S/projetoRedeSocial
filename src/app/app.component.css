@@ -1,7 +1,7 @@
 .boxH {
     background: linear-gradient(180deg, var(--color-aliceblue-1)15% , var(--color-aliceblue-2)100%);
     width: 100%;
-    height: 900px;
+    height: 768px;
     padding-top: 92px;
     padding-bottom: 92px;
     display: flex;

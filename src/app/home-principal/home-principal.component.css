@@ -5,6 +5,7 @@
     padding-top: 92px;
     padding-bottom: 92px;
     display: flex;
+    justify-content: center;
 }
 
 .boxH .container {
@@ -193,9 +194,8 @@
 
     .boxH .container {
         background-color: var(--color-cinzaMetal-1);
-        width: 980px;
+        width: 768px;
         height: 536px;
-        margin: auto;
         display: flex;
         border-radius: 6px;
         flex-direction: column;

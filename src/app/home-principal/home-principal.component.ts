@@ -9,7 +9,9 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './home-principal.component.html',
   styleUrl: './home-principal.component.css'
 })
-export class HomePrincipalComponent {
+export class HomePrincipalComponent {  
 
+  
 
 }
+

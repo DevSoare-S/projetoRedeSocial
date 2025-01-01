@@ -1,14 +1,14 @@
 <section>
     <div class="header">
         <div class="bookopen">
-
+            <a class="titu" routerLink=""><h1>Bookopen</h1></a>
         </div>
 
         <div class="login">
             <input type="text" placeholder="Email">
             <input type="password" placeholder="Senha">
             <a><button class="entrar">Entrar</button></a> 
-            <a routerLink="/cadastro">Não tem conta?</a>
+            <a class="semconta" routerLink="/cadastro">Não tem conta?</a>
         </div>
 
 
@@ -18,21 +18,29 @@
 <section>
     <div class="container">
         <div class="containerBox">
-            <div>
+            <div class="titulo">
                 <h1>Encontre sua conta</h1>
             </div>
 
-            <div>
+            <div class="paragrafo">
                 <p>Insira seu email para procurar sua conta</p>
             </div>
 
-            <div>
+            <div class="procura">
                 <input type="text" placeholder="Email">
             </div>
 
-            <div>
-                <button>Cancelar</button>
+            <div class="enviar">
+                <button routerLink="">Cancelar</button>
                 <button>Pesquisar</button>
+            </div>
+
+            <div class="contato">
+                <p>Se não receber o seu e-mail imediatamente, por favor, tente novamente mais tarde.</p>
+            </div>
+
+            <div class="social">
+                <p>Aproveite nossa rede social Bookopen</p>
             </div>
         </div>
     </div>

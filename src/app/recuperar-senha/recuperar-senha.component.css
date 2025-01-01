@@ -1,15 +1,210 @@
-    
-.entrar  {
+/* Cabeçario */
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.header .bookopen {
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    color: var(--color-azultitulo-1);
+    padding: 5px 0 0 20px;
+}
+
+.header .bookopen .titu {
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-azultitulo-1);
+}
+
+.header .login {
+    display: flex;
+    width: 720px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .login input {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: 10px;
+    padding-left: 10px ;
+    font-size: 15px;
+}
+
+.header .login a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.header .login .semconta:hover {
+    text-decoration: underline;
+}
+
+.header .login .entrar  {
     display: flex;
     justify-content: center;
-    font-size: 20px;    
+    font-size: 18px;    
     background-color: #42b72a;
     color: white;
-    width: 200px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     align-items: center;
     border-radius: 6px ;
-    text-decoration: none;
     cursor: pointer; 
-  }  
+    margin-left: 8px;
+}  
+
+.header .login a  button {
+    text-decoration: none;
+}
+
+.header .login  a button:hover {
+    text-decoration: none;
+    background-color: #1ca002;
+}
+
+
+  /* meio da página */
+
+
+.container {
+    background: linear-gradient(180deg, var(--color-aliceblue-1)15% , var(--color-aliceblue-2)100%);
+    width: 100%;
+    height: 840px;
+    padding-top: 92px;
+    padding-bottom: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .containerBox {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    background-color: #FFF;
+    flex-direction: column;
+    box-shadow: 1px 5px 10px 3px rgb(165, 158, 158);
+    box-shadow: 1px 5px 8px 2px rgb(128, 125, 125);
+    border-radius: 6px;
+}
     
+.container .containerBox .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 6px;
+    border-bottom: #7b7c7b 1px solid;
+}
+
+.container .containerBox .paragrafo {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    color: #353635;
+}
+
+.container .containerBox .procura {
+    
+    border-bottom: 1px solid #7b7c7b;
+    padding-bottom: 30px;
+}
+
+.container .containerBox .procura input {
+    width: 460px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 0 20px 0 20px;
+    padding: 3px 0 0 15px;
+    font-size: 15px;
+}
+
+.container .containerBox .enviar {
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .containerBox .enviar button {
+    width: 170px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #42b72a;
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.container .containerBox .enviar button:hover {
+    cursor: pointer;  
+    background-color: #1ca002;
+
+}
+
+.container .containerBox .contato {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7b7c7b;
+}
+
+.container .containerBox .contato p {
+    font-size: 17px;
+    color: #353635;
+    margin: 20px 10px 0 10px;
+    
+}
+
+.container .containerBox .social {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 13px;
+}
+
+@media(max-width: 768px){
+    .header .login input {
+        display: none;
+    }
+
+    .header {
+        width: 500px;
+    }
+
+    .header .bookopen {
+        width: 600px;
+    }
+
+    .header .login {
+        width: px;
+    }
+
+    .header .login a {
+        display: flex;
+    }
+
+    /* meio */
+
+    .container .containerBox {
+        margin: 0 20px 0 20px;
+        display: flex;
+        width: 400px;
+    }
+
+    .container .containerBox .procura input {
+        width: 360px;
+    }
+}

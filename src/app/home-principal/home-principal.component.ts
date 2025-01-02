@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { Customer } from '../../models/customer';
 
@@ -13,9 +13,10 @@ import { Customer } from '../../models/customer';
 })
 export class HomePrincipalComponent {  
 
-  model = new Customer(null, '', '');
+  model = new Customer(null, '', '','','', 0);
 
   momentForm!: FormGroup;
+  
   constructor() {}
 
   isVisible: boolean  = false;
@@ -25,13 +26,17 @@ export class HomePrincipalComponent {
 
   submited = false;
 
+
   onSubmit() {
+    
 
     this.submited = true;
 
     alert('Login efetuado com sucesso')
 
   }
+
+  
 
 }
 

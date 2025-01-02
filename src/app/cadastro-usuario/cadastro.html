@@ -7,16 +7,22 @@
             <h1>Criar uma nova conta</h1>
             <p>É rápido e fácil.</p>
         </div>
-        <form >
+        <form #customerForm="ngForm" (ngSubmit)="onSubmit()">
 
             <div class="nome">
                 <div class="left">
-                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Nome" required [(ngModel)]="model.nome" name="nome" #nome="ngModel">
+                    <div class="erro0" [hidden]="nome.valid || nome.pristine">Nome obrigatório</div>
                 </div>
 
+
                 <div class="rigth">
-                    <input type="text" placeholder="Sobrenome">
+                    <input type="text" placeholder="Sobrenome" required [(ngModel)]="model.sobrenome" name="sobrenome"
+                        #sobrenome="ngModel">
+                    <div class="erro0" [hidden]="sobrenome.valid || sobrenome.pristine">Sobrenome obrigatório</div>
                 </div>
+
+
 
             </div>
 
@@ -24,6 +30,7 @@
                 <div class="datas">
                     <p>Data de nascimento</p>
                 </div>
+
 
                 <div class="nascimento">
                     <select name="Dia" id="" class="sel1">
@@ -75,7 +82,7 @@
                         <option value="dez">dez</option>
                     </select>
 
-                    <select name="" id="" class="sel3">
+                    <select name="" id="teste" class="sel3">
                         <option value="1906">1906</option>
                         <option value="1907">1907</option>
                         <option value="1908">1908</option>
@@ -196,8 +203,8 @@
                         <option value="2023">2023</option>
                         <option value="2024" selected="2024">2024</option>
                     </select>
-
                 </div>
+
             </div>
 
             <div class="gen">
@@ -216,28 +223,36 @@
 
 
             <div class="cel">
-                <input type="type" placeholder="Celular" class="cele">
+                <input type="type" placeholder="Celular opcional" class="cele">
             </div>
+
 
             <div class="emai">
-                <input type="email" placeholder="Email" class="email">
+                <input type="email" placeholder="Email" class="email" required [(ngModel)]="model.email" name="email"
+                    #email="ngModel">
+                <div class="erro1" [hidden]="email.valid || email.pristine">Email obrigatório</div>
             </div>
+
 
             <div class="sen">
-                <input type="password" placeholder="Nova senha" class="senha">
+                <input type="password" placeholder="Nova senha" class="senha" required [(ngModel)]="model.password"
+                    name="password" #password="ngModel">
+                <div class="erro1" [hidden]="password.valid || password.pristine">Senha obrigatório</div>
             </div>
 
 
+
+
+
+            <div class="esp">
+                <a href=""><button [disabled]="!customerForm.form.valid">Criar conta</button></a>
+            </div>
         </form>
-
-        <div class="esp">
-            <a href=""><button>Criar conta</button></a>
-        </div >
-
         <div class="parag">
-            <p>As pessoas que criarem uma conta neste site devem estar cientes de que ele é exclusivamente voltado para fins educacionais.</p>
+            <p>As pessoas que criarem uma conta neste site devem estar cientes de que ele é exclusivamente voltado para
+                fins educacionais.</p>
         </div>
-        
+
         <div class="jatem">
 
             <a routerLink="">Já tem uma conta?</a>

@@ -64,12 +64,13 @@
 .boxH .container form .left {
     display: flex;
     float: left;
+    flex-direction: column;
 }
 
 .boxH .container form .rigth {
     display: flex;
     float: right;
-    
+    flex-direction: column;
 }
 
 .boxH .container form .left input {
@@ -137,18 +138,29 @@
     margin: 0 0 15px 0;
 }
 
+.boxH .container form .emai {
+    margin: 0 0 15px 0;
+}
+
 .boxH .container form .emai .email {
     width: 100%;
+}
+
+.boxH .container form .sen {
     margin: 0 0 15px 0;
 }
 
 .boxH .container form .sen .senha {
-    width: 100%;
-    margin: 0 0 15px 0;
+    width: 100%;   
 }
 
 .boxH .esp a {
     text-decoration: none;
+}
+
+.boxH .esp {
+    justify-content: center;
+    display: flex;
 }
 
 .boxH .esp a button {
@@ -180,7 +192,7 @@
 }
 
 .boxH .jatem {
-    margin: 50px 0 0 0 ;
+    margin: 40px 0 0 0 ;
 }
 
 .boxH .jatem a {
@@ -192,4 +204,18 @@
 .boxH .jatem a:hover {
     background-color: #f0e8e8;
     text-decoration: underline;
+}
+
+.erro0 {
+    color: red;
+    margin: 5px 0 0 0 ;
+    border-left: 6px solid red;
+    padding-left: 10px;
+}
+
+.erro1 {
+    color: red;
+    margin: 5px 0 0 0 ;
+    border-left: 6px solid red;
+    padding-left: 10px;
 }

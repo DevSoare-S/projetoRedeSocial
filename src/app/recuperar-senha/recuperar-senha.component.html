@@ -1,13 +1,15 @@
 <section>
     <div class="header">
         <div class="bookopen">
-            <a class="titu" routerLink=""><h1>Bookopen</h1></a>
+            <a class="titu" routerLink="">
+                <h1>Bookopen</h1>
+            </a>
         </div>
 
         <div class="login">
             <input type="text" placeholder="Email">
             <input type="password" placeholder="Senha">
-            <a><button class="entrar">Entrar</button></a> 
+            <a routerLink=""><button class="entrar">Entrar</button></a>
             <a class="semconta" routerLink="/cadastro">Não tem conta?</a>
         </div>
 
@@ -26,14 +28,17 @@
                 <p>Insira seu email para procurar sua conta</p>
             </div>
 
-            <div class="procura">
-                <input type="text" placeholder="Email">
-            </div>
+            <form #customerForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="procura">
+                    <input type="text" placeholder="Email" required [(ngModel)]="model.email" name="email" #email="ngModel">
+                    <div class="erro0" [hidden]="email.valid || email.pristine">Insira um email válido.</div>
+                </div>
 
-            <div class="enviar">
-                <button routerLink="">Cancelar</button>
-                <button>Pesquisar</button>
-            </div>
+                <div class="enviar">
+                    <button routerLink="">Cancelar</button>
+                    <button type="submit" [disabled]="!customerForm.form.valid" >Pesquisar</button>
+                </div>
+            </form>
 
             <div class="contato">
                 <p>Se não receber o seu e-mail imediatamente, por favor, tente novamente mais tarde.</p>

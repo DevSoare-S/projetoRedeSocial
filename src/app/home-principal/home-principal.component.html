@@ -20,10 +20,10 @@
             <div class="containerBox">
                 <div class="boxLogin">
 
-                    <form #customerForm="ngForm" (ngSubmit)="onSubmit()">
+                    <form #customerForm="ngForm"  (ngSubmit)="onSubmit()">
                         <div class="containerL ">
                             <input type="text" placeholder="Email ou Telefone" id="email" required
-                                [(ngModel)]="model.email" name="email" #email="ngModel">
+                                [(ngModel)]="model.email" name="email" #email="ngModel" >
                         </div>
                         <div class="error" [hidden]="email.valid || email.pristine">Email obrigatório</div>
 

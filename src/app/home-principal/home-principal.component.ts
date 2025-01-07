@@ -19,7 +19,6 @@ export class HomePrincipalComponent {
   
   constructor() {}
 
-  isVisible: boolean  = false;
 
   ngOnInit(): void {}
   
@@ -28,12 +27,11 @@ export class HomePrincipalComponent {
 
 
   onSubmit() {
+
+    this.submited == true;
     
-
-    this.submited = true;
-
-    alert('Login efetuado com sucesso')
-
+      alert('Logado')
+    
   }
 
   

@@ -7,19 +7,19 @@
             <h1>Criar uma nova conta</h1>
             <p>É rápido e fácil.</p>
         </div>
-        <form #customerForm="ngForm" (ngSubmit)="onSubmit()">
+        <form #customerForm="ngForm" (ngSubmit)="onSubmit($event)">
 
             <div class="nome">
                 <div class="left">
                     <input type="text" placeholder="Nome" required [(ngModel)]="model.nome" name="nome" #nome="ngModel">
-                    <div class="erro0" [hidden]="nome.valid || nome.pristine">Nome obrigatório</div>
+                    <div class="erroNome" [hidden]="nome.valid || nome.pristine">Nome obrigatório</div>
                 </div>
 
 
                 <div class="rigth">
                     <input type="text" placeholder="Sobrenome" required [(ngModel)]="model.sobrenome" name="sobrenome"
                         #sobrenome="ngModel">
-                    <div class="erro0" [hidden]="sobrenome.valid || sobrenome.pristine">Sobrenome obrigatório</div>
+                    <div class="erroSobrenome" [hidden]="sobrenome.valid || sobrenome.pristine">Sobrenome obrigatório</div>
                 </div>
 
 
@@ -230,18 +230,19 @@
             <div class="emai">
                 <input type="email" placeholder="Email" class="email" required [(ngModel)]="model.email" name="email"
                     #email="ngModel">
-                <div class="erro1" [hidden]="email.valid || email.pristine">Email obrigatório</div>
+                <div class="erroEmail" [hidden]="email.valid || email.pristine">Email obrigatório</div>
             </div>
 
 
             <div class="sen">
-                <input type="password" placeholder="Nova senha" class="senha" required [(ngModel)]="model.password"
-                    name="password" #password="ngModel">
-                <div class="erro1" [hidden]="password.valid || password.pristine">Senha obrigatório</div>
+                <input [type]="showPassword" placeholder="Nova senha" class="senha" required [(ngModel)]="model.password"
+                    name="password" #password="ngModel" (blur)="onTouch()" >
+                <div class="showPassword"><button (click)="passwordShow($event)"><img [src]="showPassword === 'password' ? './eyesOpen.png' : './eyesClose.png' "></button></div>
+                <div class="erroSenha" *ngIf="isTouched" [class.valid]="isValid">
+                    <span  [class.valid]="isValid">
+                    A senha deve conter [A-Z] <br>- [a-z] - [0-9] - [$!%*?&]
+                </span></div>
             </div>
-
-
-
 
 
             <div class="esp">

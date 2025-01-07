@@ -21,6 +21,7 @@
 }
 
 .boxH .container {
+    position: relative;
     background-color: #fffefe;
     display: flex;
     width: 400px;
@@ -65,12 +66,14 @@
     display: flex;
     float: left;
     flex-direction: column;
+    position: relative;
 }
 
 .boxH .container form .rigth {
     display: flex;
     float: right;
     flex-direction: column;
+    position: relative;
 }
 
 .boxH .container form .left input {
@@ -140,6 +143,7 @@
 
 .boxH .container form .emai {
     margin: 0 0 15px 0;
+    position: relative;
 }
 
 .boxH .container form .emai .email {
@@ -148,6 +152,7 @@
 
 .boxH .container form .sen {
     margin: 0 0 15px 0;
+    position: relative;
 }
 
 .boxH .container form .sen .senha {
@@ -207,15 +212,103 @@
 }
 
 .erro0 {
+    position: relative;
     color: red;
     margin: 5px 0 0 0 ;
     border-left: 6px solid red;
     padding-left: 10px;
 }
 
-.erro1 {
-    color: red;
-    margin: 5px 0 0 0 ;
-    border-left: 6px solid red;
-    padding-left: 10px;
+.erroSenha {
+  position: absolute;
+  top: 100%;
+  left: -210px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-82%);
+  width: 190px ;
+  height: 50px;
+}
+
+.erroEmail {
+  position: absolute;
+  top: 100%;
+  left: 390px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-140%);
+  width: 130px ;
+  height: 30px;
+}
+
+.erroNome {
+    position: absolute;
+    top: 100%;
+    left: -150px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-107%);
+    width: 130px ;
+    height: 30px;
+}
+
+.erroSobrenome {
+  position: absolute;
+  top: 100%;
+  left: 195px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-72%);
+  width: 130px;
+  height: 45px;
+}
+
+.erroSenha.valid {
+    display: none;
+}
+
+.sen .erroSenha span.valid {
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+.boxH .container form .sen .erroSenha span.valid {
+    display: none;
+}
+
+.showPassword {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 335px;
+    
+}
+
+.showPassword button {
+    height: 30px;
+    width: 30px;
+}
+
+.showPassword button:hover {
+    cursor: pointer;
+}
+.showPassword button img {
+    height: 30px;
+    width: 30px;
+    
 }
